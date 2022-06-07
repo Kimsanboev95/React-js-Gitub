@@ -1,0 +1,110 @@
+            <Grid container spacing={2}>
+                <Grid item xs={8}>
+                    <Item>
+                        <Item>
+                            <h3 
+                                First Name
+                            </h3>
+                            <input
+                                label="name"
+                                type="text" 
+                                width='100%'
+                                />
+                        </Item>
+                    </Item>
+                </Grid>
+                <Grid item xs={4}>
+                    <Item>xs=4</Item>
+                </Grid>
+                <Grid item xs={6}>
+                    <Item>xs=4</Item>
+                    <TextField
+        helperText="Please enter your name"
+        id="demo-helper-text-aligned"
+        label="Name"
+      />
+                </Grid>
+                <Grid item xs={6}>
+                    <Item>xs=8</Item>
+                    <TextField
+        id="outlined-name"
+        label="Name"
+        value={name}
+        onChange={handleChange}
+      />
+                </Grid>
+            </Grid>                 
+
+
+            {/* <Box items xs={12} md={6} lg={12}
+    //   component="form"
+      sx={{
+        '& > :not(style)': { m:'2%',  width: '60ch' },
+      }}
+      noValidate
+      autoComplete="off"
+    >
+        <h3>First name</h3>
+      <TextField
+        id="outlined-name"
+        // label="Name"
+        value={name}
+        onChange={handleChange}
+      />
+     
+          {/* <Typography>input name</Typography> */}
+            {/* <input type="text" /> */}
+            {/* <TextField
+        id="outlined-uncontrolled"
+        // label="Uncontrolled"
+        defaultValue="foo"
+      /> */}
+            {/* </Box> */}
+
+
+
+
+
+
+
+            
+  sx={{ '&:hover': {
+        color: 'red',
+        backgroundColor: 'white',
+      },    
+  }}
+
+
+
+
+
+  'hover':{cursor:'not-ellowed'}
+
+
+
+
+
+
+
+  
+const Input = styled('input')({
+  display: 'none',
+});
+
+export default function UploadButtons() {
+  return (
+    <Stack direction="row" alignItems="center" spacing={2}>
+      <label htmlFor="contained-button-file">
+        <Input accept="image/*" id="contained-button-file" multiple type="file" />
+        <Button variant="contained" component="span">
+          Upload
+        </Button>
+      </label>
+      <label htmlFor="icon-button-file">
+        <Input accept="image/*" id="icon-button-file" type="file" />
+        <IconButton color="primary" aria-label="upload picture" component="span">
+          <PhotoCamera />
+        </IconButton>
+      </label>
+    </Stack>
+  );
